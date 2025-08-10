@@ -1,0 +1,28 @@
+**PNPM**
+
+*give disk space save,speed install
+
+* user content addressable store =>In pnpm, the content-addressable store is a storage system where packages are saved based on a hash of their content. This means identical packages, regardless of where they’re used, are stored only once. When a project needs a package, pnpm creates a lightweight link to the stored version, saving disk space and speeding up installations. (like symlink)
+
+** But it is fast, and space saver
+
+*No default in this
+
+**but there is problem in depolyment in devpolment we thnk tere are our node module in projecty by symlink so we have look at this probelm but ther in not node_moudel that we get devlpoment issue
+
+
+** have workspace =>gets monorepo
+
+Workspace
+In package managers like Yarn, npm, or pnpm, a workspace is a feature that helps manage multiple packages within a single repository.
+It automatically links local packages together.
+It avoids repeated installs for shared dependencies.
+It’s essentially a tooling concept for working efficiently in a monorepo.
+
+
+
+
+Monorepo = the repo structure itself (multiple projects in one repo).
+Workspace = the package manager’s feature for handling multiple packages in that monorepo.
+
+💡 You can have a monorepo without using workspaces (just manual linking), but workspaces make monorepos much easier to manage.

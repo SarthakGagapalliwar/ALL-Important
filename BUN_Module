@@ -1,0 +1,7 @@
+**BUN** => nodejs+package manager +bundler + aws
+
+** fastest
+** new hia mature pe saval uthate hia log
+
+**=>
+A Bun module is a JavaScript or TypeScript module that runs in the Bun runtime, Bun’s fast all-in-one JavaScript toolkit. It supports both ESM and CommonJS formats, and comes with built-in features like a bundler, transpiler, and package manager. Bun modules can be imported just like in Node.js or Deno, but they run faster thanks to Bun’s native optimizations.

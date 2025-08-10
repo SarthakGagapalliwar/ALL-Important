@@ -1,0 +1,18 @@
+npm is pacakages managar
+
+
+pacakages managar => A package manager is a tool that automates installing, updating, configuring, and removing software packages. It helps manage dependencies and ensures the correct versions of libraries or applications are used.
+
+
+NPM => not correct name But to call (NODE PACKAGE MANAGER)
+
+
+* it is default =>means pre install hu
+* huge ecosystem mil tha hai npm reposistry mil te hia and this is highly support
+* improvement => constantly upadted aate hai 
+
+* slow
+* node_modules => have big size 
+
+
+* it is (stable) and kaha par bhi deployed ke liye dheko ghe tho vaha var npm hoga hi hoga

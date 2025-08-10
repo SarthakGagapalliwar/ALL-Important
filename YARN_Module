@@ -1,0 +1,10 @@
+YARN => by facebook;
+because facebook constantly contribut in open source
+
+* it is fast =>user parallel excution =>In Yarn (and other package managers), parallelism means running multiple tasks at the same time instead of one after another.
+you get yarn.lock instant of pagakag.json
+
+
+* gets workspace => monorepo
+
+**NO default
