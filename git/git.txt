@@ -1,0 +1,146 @@
+Git is a free and epen source version
+control system for your code.
+
+What??? => like it is version controler
+This basically means that it managc.±
+changes to a project without overwriting
+any part of that project.
+
+Git is basically a collection of notes on
+the most recently worked on project files
+as well as a nice, chronological history_ of
+what has changed.
+
+summary => version control , notes Collector and mantaing the history
+
+***/***
+
+More formally, Git is a distributed
+version control system (VCS)
+
+You can think of it like a shared digital
+diary for computer code, allowing many
+people to write in it while keeping a
+record of all changes made over time.
+
+Git lets multiple users track changes in
+source code during software development,
+maintaining a history of code changes,
+and ensuring traceability
+
+
+
+*/*/*/*/*/*/*/*/*/*/*
+
+
+What is GitBash?
+Git Bash is a terminal emulator for Windows.
+When you install Git for Windows,
+Git Bash is included as an option.
+Not needed if you are using VSCode
+
+ls -a => show all hidden files 
+
+
+
+4 types of Git status
+• Untracked: Git does not know about the file, since it's not
+committed. New file. ... like if you make new file after cloneing the repo.
+• Modified: We made change in the earlier committed file.
+• Unmodified: No change in file.
+• Staged: File ready to be committed.
+
+
+the Staging area =>
+MOdifing/untracked files=> 1)add file to Staging area => 2)commit file for permanent git record=>snapshot by git(permanent record)
+
+
+
+Step 5: Add and commit
+
+How does Git track changed files?
+Git add: Adds new or changed files in your
+working directory, to the Git staging area.
+
+Git commit: It is the record of change. Git
+creates a snapshot and a permanent record
+is created.
+
+
+Step 6: Push command
+Git push — Upload local repo content to
+remote repo
+
+
+
+Step 2: Git init
+Initialize a new, empty Git
+repository in the current directory, creating
+.git folder to track version history! for the
+Project
+
+
+Step 6: Create a bridge between local
+and remote repo
+Git remote add origin <link> Associates
+remote repository with your local Git
+repository under the name "origin,"
+
+
+Step 7: Check the bridge
+'Git remote -V Verify remote repository'
+
+
+
+
+/*/*/*/*/*/*/*/*
+
+braching
+
+Part 1: Check which branch you are on =>
+git branch ## Check which branch you are on currently
+
+Part 2: Rename branch name=>
+git branch -m name  ## Rename branch
+
+Part 3: Navigate to a particular branch
+git checkout name ## Navigate to a different branch
+
+Part 4: Create new branch=>
+git checkout -b new-branch-name ## create new branch
+
+Part 5: Delete a branch=>
+git branch -d branch-name ## Delete branch  // but we cant Delete the branch which we current on
+
+part 6: push into the branch
+git push origin branch-name
+
+
+
+
+part 8 : Merging code
+
+Way 1: Merging through Git (command line)
+git diff branch-name ## check difference between 2 branches
+
+git merge branch-name ## merge 2 branches
+
+
+way 2: Through Github
+Pull reques : It lets you tell others about
+change you have pushed to a branch in a
+repository on Github.
+
+*** Pull request review: Pull request is reviewed
+by senior developers.
+
+*** Merge decision: Senior developers decide
+whether to merge or not
+
+
+
+Part 9: Bring remote changes to local
+Git pull origin main: Fetch and download
+content from remote repo and immediately
+update local repo to match content. =>
+git pull origin main ## Pull changes from remote to local
