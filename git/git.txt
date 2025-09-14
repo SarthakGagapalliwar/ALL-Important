@@ -144,3 +144,12 @@ Git pull origin main: Fetch and download
 content from remote repo and immediately
 update local repo to match content. =>
 git pull origin main ## Pull changes from remote to local
+
+
+
+part 10 :Forking a repository
+Git fork: New repository that shares code
+and visibility settings with original
+"upstream" repository.
+Fork is a rough copy.
+
