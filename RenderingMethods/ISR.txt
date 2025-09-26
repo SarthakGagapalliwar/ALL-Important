@@ -1,0 +1,35 @@
+ISR = Incremental Static Regeneration
+
+It’s a hybrid approach between SSG (Static Site Generation) and SSR (Server-Side Rendering).
+Pages are pre-rendered like SSG, but can be regenerated on the server in the background
+after a certain time (without rebuilding the whole site).
+Example: Next.js revalidate property.
+
+✅ Pros of ISR
+1.Fast performance (like SSG):
+Users get static pre-rendered pages directly from CDN
+2.Fresh content (like SSR):
+Pages can update after a set time (revalidate) → no need to rebuild everything.
+3.Scalable:
+Static files served globally via CDN.
+Only specific pages regenerate when needed, not the whole site.
+4.SEO-friendly:
+Since pages are pre-rendered, bots see complete HTM
+5.Reduced build times:
+Large sites with thousands of pages don’t need to regenerate all pages on each build
+
+❌ Cons of ISR
+1.Stale content window:
+Users may see outdated content until regeneration happens.
+2.Complexity:
+More complicated than pure SSG/SSR.
+Requires caching/CDN setup to work properly.
+3.Not real-time:
+Changes are not instant. Content updates only after the revalidation time or a regeneration trigger.
+4.Debugging challenges:
+Since regeneration happens in the background, tracking issues can be harder.
+
+⚡ TL;DR:
+ISR = SSG + automatic updates.
+✅ Fast, SEO-friendly, scalable, handles changing content.
+❌ Stale content possible, more complex setup.

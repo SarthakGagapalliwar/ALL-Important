@@ -1,0 +1,56 @@
+SSG = Static Site Generation
+The HTML for all pages is pre-built at build time (before deployment).
+The server (or CDN) just serves those static HTML files.
+No rendering is needed on each request.
+👉 Example: Next.js getStaticProps
+
+
+
+What is Content Delivery Network(CDN) in System Design ...CDN stands for 
+Content Delivery Network (or sometimes Content Distribution Network). 
+It is a network of geographically distributed servers that store copies 
+of web content (like images, CSS, or JavaScript files) closer to end-users to 
+reduce latency and speed up content delivery. 
+
+✅ Pros of SSG
+1.Blazing fast performance:
+HTML is pre-rendered → served directly from CDN. Content Delivery Network
+Almost zero server processing.
+
+2.Best for SEO:
+Content is already in HTML → search engines can easily index.
+
+3.Scalable & cheap:
+Serving static files is inexpensive.
+Works well with CDNs (like Vercel, Netlify, Cloudflare).
+
+4.Secure:
+No server-side code execution → less attack surface.
+
+5.Consistent:
+Every user sees the same pre-built content → no runtime errors from server rendering.
+
+
+❌ Cons of SSG
+1.Not great for dynamic data:
+Pages are built once.
+If content changes often (like stock prices, dashboards, or user-specific content), you 
+need regeneration.
+
+2.Long build times:
+For large sites with thousands of pages, generating all HTML at build time can be very slow.
+
+3.Limited personalization:
+Since content is static, you can’t easily serve user-specific data without adding client-side rendering or APIs.
+
+4.Rebuild required for updates:
+To reflect new content, you must rebuild and redeploy (though frameworks 
+like Next.js offer Incremental Static Regeneration to fix this).
+
+⚡ TL;DR:
+SSG = Pre-build HTML at build time.
+✅ Super fast, SEO-friendly, and scalable.
+❌ Not suitable for apps that change frequently or need personalization.
+
+
+//in this the problem of updatde then comes ISR

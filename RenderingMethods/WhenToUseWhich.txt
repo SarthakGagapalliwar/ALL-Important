@@ -1,0 +1,69 @@
+| Feature                           |  CSR (Client-Side Rendering)                    |  SSR (Server-Side Rendering)                                          |   SSG (Static Site Generation)                            |  ISR (Incremental Static Regeneration)                                             |
+| --------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+|  Where rendering happens?       | Browser (client)                                  | Server (on every request)                                           | Build time (before deployment)                             | Build time + re-generated on demand                                                  |
+|  First Load Speed               | ❌ Slow (white screen until JS loads)              | ✅ Fast (HTML ready)                                                 | ✅ Super fast (CDN static files)                            | ✅ Super fast (CDN + updated in background)                                           |
+|  Navigation (after first load)  | ✅ Instant (SPA-like)                              | ❌ Needs server request                                              | ✅ Instant (static files)                                   | ✅ Instant (static files)                                                             |
+|  SEO                            | ❌ Poor (needs extra setup)                        | ✅ Great (HTML rendered)                                             | ✅ Excellent                                                | ✅ Excellent                                                                          |
+|  Best For                       | Highly interactive SPAs (dashboards, chats, etc.) | Dynamic content that changes per request (news feed, user profiles) | Content that rarely changes (blogs, docs, marketing sites) | Content that changes occasionally (e-commerce products, blogs with frequent updates) |
+|  Server Load                    | ✅ Low (server only serves static files)           | ❌ High (render on each request)                                     | ✅ Very low (just static files)                             | ✅ Low (regenerates only when needed)                                                 |
+|  Scalability                    | ✅ Easy                                            | ❌ Hard (server can bottleneck)                                      | ✅ Very high (CDN caching)                                  | ✅ High (CDN + partial regeneration)                                                  |
+|  Freshness of Data              | ✅ Always fresh (from APIs)                        | ✅ Always fresh (from server)                                        | ❌ Can be outdated until rebuild                            | ⚡ Fresh after revalidation interval                                                  |
+|  Complexity                     | ✅ Simple                                          | ❌ Medium/High                                                       | ✅ Simple                                                   | ❌ Medium (needs caching + revalidation setup)                                        |
+
+
+👉 Quick use cases:
+
+CSR: Dashboards, Gmail-like apps, chats, where SEO isn’t a priority.
+SSR: News sites, dynamic content apps, logged-in user-specific data.
+SSG: Blogs, documentation, portfolios, marketing pages.
+ISR: E-commerce stores, large blogs, sites with frequently updated but not real-time data.
+
+
+
+🧠 Memory Tricks
+
+CSR (Client-Side Rendering):
+👉 “Browser builds the page.”
+First load is slow, but navigation is super fast.
+Best for SPAs like Gmail, dashboards, chats.
+
+SSR (Server-Side Rendering):
+👉 “Server builds the page on every request.”
+Fast first load, good for SEO, but heavier on the server.
+Best for dynamic sites (news, user profiles).
+
+SSG (Static Site Generation):
+👉 “Page built once, served forever.”
+Blazing fast, SEO-friendly, but not good for frequently changing data.
+Best for blogs, docs, portfolios.
+
+ISR (Incremental Static Regeneration):
+👉 “Static, but can refresh in the background.”
+Combines speed of SSG with freshness of SSR.
+Best for e-commerce, large blogs, frequently updated content.
+
+⚡ Quick formula to remember:
+
+CSR → Client does work
+User -> Request page
+Server -> Sends EMPTY HTML + JS bundle
+Browser -> Runs JS -> Fetches Data -> Renders UI
+
+SSR → Server does work
+User -> Request page
+Server -> Fetches Data + Renders HTML
+Server -> Sends FULL HTML to Browser
+Browser -> Shows content immediately
+
+SSG → Build does work
+Build Time -> Pages pre-rendered into HTML
+User -> Request page
+Server/CDN -> Sends READY HTML instantly
+
+
+ISR → Build + refresh on demand
+Build Time -> Pages pre-rendered
+User -> Request page
+CDN -> Serves static HTML
+Revalidation Time -> Server regenerates page in background
+Next User -> Gets fresh HTML
